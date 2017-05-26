@@ -1,0 +1,25 @@
+{
+  "name": "test-sherlock",
+  "version": "1.0.0",
+  "description": "Test sherlock as Rasp pi programm ",
+  "main": "nodeServer.js",
+  "scripts": {
+    "test": "Test-command"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbillardm/Test_sherlock_rasp.git"
+  },
+  "keywords": [
+    "Yolo"
+  ],
+  "author": "VBM",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vbillardm/Test_sherlock_rasp/issues"
+  },
+  "homepage": "https://github.com/vbillardm/Test_sherlock_rasp#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}

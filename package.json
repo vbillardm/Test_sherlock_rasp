@@ -4,6 +4,7 @@
   "description": "Test sherlock as Rasp pi programm ",
   "main": "nodeServer.js",
   "scripts": {
+    "dev": "nodemon nodeServer.js",
     "test": "Test-command"
   },
   "repository": {
@@ -20,6 +21,11 @@
   },
   "homepage": "https://github.com/vbillardm/Test_sherlock_rasp#readme",
   "dependencies": {
-    "express": "^4.15.3"
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongodb": "^2.2.27"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }

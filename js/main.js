@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function() {  //config languqe
 
         $('.cls-1').on('mouseover',function(){
             $('.cls-1').attr('fill','#888');
@@ -41,7 +41,7 @@ $(document).ready(function() {
                     var cmd = new command(words[0], transcript.replace(words[0], ''));
 
                     $('#result').text(transcript);
-          #          console.log(cmd,$('#result').text(transcript));
+                    console.log(cmd,$('#result').text(transcript));
                 } else {
                     $('#result').text($('#result').text() + event.results[i][0].transcript);
                 }

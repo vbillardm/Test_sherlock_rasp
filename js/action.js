@@ -1,5 +1,6 @@
 var command = function (key, query) {
     'use strict';
+    var voice = 'French Female' ;
     this.Google = {
         response_voice : 'Voici les resultats de Google',
         link : 'https://www.google.com/search?q='

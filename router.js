@@ -13,6 +13,11 @@ module.exports = function(app){
 
   	// add song
   app.post('/addSong', (req, res) => {
-    console.log(req.body);
+    db.collection('songs').save(req.body, (err, result) => {
+      console.log('yolo')
+    if (err) return console.log(err)
+      console.log('saved to database')
+    res.redirect('/')
+    })
   })
 }

@@ -20,10 +20,6 @@ var Config = require('./ConfigGlobal.js');
 // css / js / html files
 app.use(express.static(__dirname));
 
-// initialize db before running client.
-Config.initialize(function(err) {
-	if(err) throw err; // bad DB initialization
-	app.listen(port, hostname, () => {
-		console.log('listening on 3000')
-	})
+app.listen(port, hostname, () => {
+	console.log('listening on 3000')
 })

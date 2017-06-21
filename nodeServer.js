@@ -11,7 +11,7 @@ const port = 3000;
 const express = require('express');
 var app = express();
 app.use(bodyParser.urlencoded({extended: true}));
-app.set('view', 'jade');
+app.set('view engine', 'jade');
 
 // db connection
 var db

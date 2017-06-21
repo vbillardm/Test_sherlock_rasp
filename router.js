@@ -1,27 +1,27 @@
 require ("./nodeServer.js");
-var Config = require('./ConfigGlobal.js');
 
-// initialize db before running client.
-Config.initialize(function(err) {
-	if(err) throw err; // bad DB initialization
-  console.log(db);
-  })
-
-module.exports = function(app){
+module.exports = function(app,db){
   // get sherlock
-  app.get('/',function(req,res){
-  	res.sendFile("node.html", { root: __dirname });
-  	})
+  // app.get('/',function(req,res){
+  // 	res.sendFile("node.html", { root: __dirname });
+  // 	})
+
+app.get('/',function(req,res){
+  var songs = db.collection('songs').find().toArray(function(err, results) {
+		if (err) return console.log(err)
+	});
+	// res.render("list.html", { root: __dirname+"/views" });
+	res.render('list', { songs: songs })
+})
 
 // add form
   app.get('/add',function(req,res){
-  	res.sendFile("form.html", { root: __dirname+"/template" });
+  	res.sendFile("form.html", { root: __dirname+"/views" });
   	})
 
   	// add song
   app.post('/addSong', (req, res) => {
     db.collection('songs').save(req.body, (err, result) => {
-      console.log('yolo');
     if (err) return console.log(err)
       console.log('saved to database')
     res.redirect('/')
